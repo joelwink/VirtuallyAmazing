@@ -66,7 +66,7 @@ class Connector(object):
         if kill and elapsed > 300 and uuid not in self.dead:
           self.dead.add(uuid)
           print 'DELETE', name, uuid, 'ELAPSED', elapsed
-          #ApplicationService().deleteApplication(self.connection, app)
+          ApplicationService().deleteApplication(self.connection, app)
 
   def launch_blueprint(self, name):
     headers = {'Content-type': 'application/json','Accept': 'application/json'}
